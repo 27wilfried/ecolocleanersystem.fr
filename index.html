@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/cocoen/docs/css/cocoen.min.css">
+
+    <style>
+        .colored-background {
+            position: relative;
+            display: inline-block;
+        }
+
+        .colored-background::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #93b932;
+            /* Couleur de fond */
+            transform: skewY(-2deg);
+            /* Inclinaison verticale */
+            transform-origin: bottom left;
+            /* Point d'origine de la transformation */
+            z-index: -1;
+            /* Placez le fond derrière le texte */
+        }
+
+        .background-incline {
+            background: #93b932;
+            transform: skewY(-2deg);
+            background-size: 100% 200%;
+            /* Largeur à 100% et hauteur à 200% pour incliner verticalement */
+            background-clip: text;
+            /* Limiter le fond au texte */
+            color: #000;
+            /* Espacement du texte par rapport au fond */
+        }
+
+        .background-inclin {
+            position: relative;
+            background-color: #87CEEB;
+            padding: -1px 5px;
+            display: inline-block;
+        }
+
+        .background-inclin::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5%;
+            height: 5%;
+            background: linear-gradient(10deg, transparent 50%, #87CEEB 50%);
+            /* Fond incliné */
+            z-index: -1;
+        }
+
+        .yellow-underline {
+            position: relative;
+        }
+
+        .yellow-underline::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            /* Hauteur du soulignement */
+            background-color: yellow;
+            /* Couleur du soulignement */
+        }
+
+        .user-review {
+            text-align: center;
+        }
+
+        .stars {
+            color: gold;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid offset-1">
+            <a class="navbar-brand" href="#">
+                <img src="asset/img/logo.png" alt="logo">
+            </a>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav offset-2">
+                    <li class="nav-item" style="margin-right: 100px;">
+                        <a class="nav-link active" aria-current="page" href="#">A propos</a>
+                    </li>
+                    <li class="nav-item" style="margin-right: 100px;">
+                        <a class="nav-link active" aria-current="page" href="#">Nos services</a>
+                    </li>
+                    <li class="nav-item" style="margin-right: 100px;">
+                        <a class="nav-link active" aria-current="page" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-warning" aria-current="page" style="border-radius: 0" href="#">Devis
+                            en ligne</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <hr class="my-1" style="border-color: #93b932; height: 100px;">
+
+    <div class="container" style="margin-top: -80px;" style="margin-left: -50px;">
+        <div class="row offset-1">
+            <div class="col-md-4 "> <!-- Ajout de la classe mt-n3 -->
+                <h4 style="margin-left: -25px;">ENTREPRISE DE NETTOYAGE</h4>
+                <h4 class="offset-2 colored-background">ECOCERTIFIEE</h4>
+                <p class="text-center" style="letter-spacing: 0px;margin-left: -100px;">
+                    VEHICULES, LOCAUX ET MOBILIER
+                </p>
+                <div class="d-flex justify-content-center align-items-center" style="margin-left: -100px;">
+                    <img src="asset/img/ecocert1.png" alt="Image2" class="mr-2 my-img" style="margin-right: 20px;">
+                    <img src="asset/img/Lucie.png" alt="Image1" class="my-img">
+                </div>
+                <div class="text-center my-4" style="margin-left: -100px;">
+                    <a class="btn btn-warning" style="border-radius: 0" href="#">Devis en ligne</a>
+                </div>
+
+            </div>
+            <div class="col-md-8">
+                <img src="asset/img/picture1.png" alt="Image" class="img-fluid" style="width: 500px;">
+            </div>
+        </div>
+    </div>
+    <h1 class="text-center my-4 offset-1" style="margin-left: 50px;">
+        N<span style="border-bottom: 1px solid #93b932;">OS SERVICE</span>S
+    </h1>
+    <section style="background-color: #93b932;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 my-5">
+                    <img src="asset/img/esc.png" alt="Image" class="img-fluid">
+                </div>
+                <div class="col-md-6 my-5" style="background-color: rgb(255, 255, 255);">
+                    <!-- Contenu de la deuxième colonne -->
+                    <h4 class="my-4 text-center">
+                        <span>NETTOYAGE</span> <span class="colored-background background-incline">ECORESPONSABLE</span>
+                    </h4>
+                    <div class="d-flex justify-content-center align-items-center">
+                        <ul>
+                            <li>Nettoyage écologique des <br>
+                                <p class="text-center">véhicules, bus et autocars</p>
+                            </li>
+                            <li>Nettoyage écologique des <br>
+                                <p class="text-center">bureaux, locaux et vitres</p>
+                            </li>
+                            <li>Nettoyage et rénovation du <br>
+                                <p class="text-center">mobilier de bureau</p>
+                            </li>
+
+                            <div class="text-center my-4" style="margin-left: -100px;">
+                                <a class="btn btn-warning offset-3" style="border-radius: 0" href="#">Devis en ligne</a>
+                            </div>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="col-md-6" style="background-color: rgb(255, 255, 255);height: 289px;width: 570px;">
+                    <!-- Contenu de la deuxième colonne -->
+                    <h4 class="my-4 text-center">
+                        <span class="colored-background background-incline">DESINFECTION</span><span> ET TRAITEMENT DES
+                        </span>
+                        <p>SURFACES</p>
+                    </h4>
+                    <div class="d-flex justify-content-center align-items-center">
+                        <ul>
+                            <li>Désinfection des surfaces
+                            </li>
+                            <li>Traitement anti-dérapant Bio-Gliss’
+                            </li>
+                            <div class="text-center my-4" style="margin-left: -100px;">
+                                <a class="btn btn-warning offset-3" style="border-radius: 0" href="#">Devis en ligne</a>
+                            </div>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="col-md-6 mb-5">
+                    <img src="asset/img/ecs2.png" alt="Image" class="img-fluid offset-2"
+                        style="width: 459px;height: 289px; left: 764px;">
+                </div>
+            </div>
+        </div>
+    </section>
+    <h1 class="text-center my-4 offset-2" style="margin-left: 50px;">
+        CH<span style="border-bottom: 1px solid #93b932;">IFFRES CLE</span>S
+    </h1>
+
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 my-5">
+                    <h2 class="offset-3 my-1">
+                        <span class="colored-background background-inclin" style="text-orientation: -50%;">95 000 000
+                            L</span>
+                    </h2>
+                    <img src=" asset/img/Arrow2.png" alt="arrow" style="margin-left: 200px;">
+                    <p style="margin-left: 70px;">Quantité d’eau consommée <strong>chaque jour</strong> <br>en France
+                        pour le nettoyage
+                        de véhicules</p>
+                </div>
+
+
+                <div class="col-md-6 my-5" style="background-color: rgb(255, 255, 255);">
+                    <!-- Contenu de la deuxième colonne -->
+
+                    <div class="d-flex justify-content-center align-items-center">
+                        <p>Nombre de litres d’eau nécessaires en <br> moyenne pour nettoyer un véhicule léger</p>
+                        <img class="mt-2" src=" asset/img/Arrow3.png" alt="arrow"
+                            style="margin-left: -400px;padding: 50px;">
+
+                        <h2 class="offset-3 my-0 mt-5" style="margin-left: -100px"> <br>
+                            <span class="colored-background background-inclin" style="text-orientation: -50%;">200
+                                L</span>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="offset-3" style="letter-spacing: 2px;">En 2022 chez Ecolo Cleaner grâce à nos <strong>processus de
+                nettoyage sans eau :</strong>
+        </p>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row offset-3">
+                <div class="col-md-4">
+                    <img class="mt-2 offset-1" src="asset/img/Rectangle5.png" alt="arrow"> <br>
+                    <h1 class="colored-background" style="margin-left: 60px;">2702</h1>
+                    <p class="offset-1">L d’eau économisés</p>
+
+                </div>
+                <div class="col-md-4 mt-5">
+                    <img class="mt-2" src="asset/img/caratere.png" alt="arrow">
+                </div>
+                <div class="col-md-4 my-0">
+                    <img class="mt-2" style="margin-left: -200px;" src="asset/img/zyro-image1.png" alt="arrow"> <br>
+                    <h1 class="colored-background" style="margin-left: -150px;margin-top: -100px;">540 400</h1>
+                    <p style="margin-left: -150px">L d’eau économisés</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <h1 class="text-center my-4 offset-2" style="margin-left: 50px;">
+        NOS<span style="border-bottom: 1px solid #93b932;"> REALOSATI</span>ONS
+    </h1>
+    <p style="margin-left: 600px;">Un <strong>avant/après</strong> de nos services ? <br>
+    </p>
+    <p style="margin-left: 550px;">Jouez avec le <span class="yellow-underline">curseur jaune</span> pour voir les
+        résultats !</p>
+
+    <section id="work" class="page">
+        <div class="container">
+            <div class="content text-center">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="portfolio">
+                            <div class="row align-items-center">
+                                <div class="col-md-6 col-lg-6 col-xs-12 mb-4">
+                                    <div class="cocoen">
+                                        <img src="asset/img/4.jpg" height="350" style="object-fit: cover" alt="">
+                                        <img src="asset/img/5.jpg" height="350" style="object-fit: cover" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-6 col-xs-12 mb-4">
+                                    <div class="cocoen">
+                                        <img src="asset/img/9.jpg" height="350" style="object-fit: cover" alt="">
+                                        <img src="asset/img/10.jpg" height="350" style="object-fit: cover" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-6 col-xs-12 mb-4">
+                                    <div class="cocoen">
+                                        <img src="asset/img/4.jpg" height="350" style="object-fit: cover" alt="">
+                                        <img src="asset/img/5.jpg" height="350" style="object-fit: cover" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-6 col-xs-12 mb-4">
+                                    <div class="cocoen">
+                                        <img src="asset/img/4.jpg" height="350" style="object-fit: cover" alt="">
+                                        <img src="asset/img/5.jpg" height="350" style="object-fit: cover" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-6 col-xs-12 mb-4">
+                                    <div class="cocoen">
+                                        <img src="asset/img/4.jpg" height="350" style="object-fit: cover" alt="">
+                                        <img src="asset/img/5.jpg" height="350" style="object-fit: cover" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-6 col-xs-12 mb-4">
+                                    <div class="cocoen">
+                                        <img src="asset/img/4.jpg" height="350" style="object-fit: cover" alt="">
+                                        <img src="asset/img/5.jpg" height="350" style="object-fit: cover" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-6 col-xs-12 mb-4">
+                                    <div class="cocoen">
+                                        <img src="asset/img/4.jpg" height="350" style="object-fit: cover" alt="">
+                                        <img src="asset/img/5.jpg" height="350" style="object-fit: cover" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-6 col-xs-12 mb-4">
+                                    <div class="cocoen">
+                                        <img src="asset/img/4.jpg" height="350" style="object-fit: cover" alt="">
+                                        <img src="asset/img/5.jpg" height="350" style="object-fit: cover" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container mt-5">
+        <div id="userReviews" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="user-review">
+                        <h3 class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</h3>
+                        <p>Très satisfait de la prestation. Effet Wahou ! Je recommande vivement au vu du rapport
+                            qualité/prix !</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="user-review">
+                        <h3 class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</h3>
+                        <p>Le meilleur service de nettoyage que j'ai jamais utilisé. Le résultat est incroyable et le
+                            prix est très compétitif.
+                        </p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="user-review">
+                        <h3 class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</h3>
+                        <p>Excellent service de nettoyage ! Le personnel est professionnel et attentif aux détails. Je
+                            suis très satisfait du
+                            résultat.</p>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#userReviews" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Précédent</span>
+            </a>
+            <a class="carousel-control-next" href="#userReviews" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Suivant</span>
+            </a>
+        </div>
+    </section>
+    <div class="text-center my-4" style="margin-left: -100px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg">
+                    <div class="offset-2">
+                        <a class="btn btn-warning" style="border-radius: 0" href="#">Devis en ligne</a>
+                        <img src="asset/img/goute.png" alt="Image" class="img-fluid" style="width: 50px;height: 50px">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer style="background-color: #B5CF71; ">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <!-- Première colonne -->
+                    <img src="logo.png" style="padding: 50px;" alt="Logo du site">
+                </div>
+                <div class="col-md-4">
+                    <!-- Deuxième colonne -->
+                    <div class="offset-3">
+                        <img src="asset/img/logo-linkedin.png.png" class="justify-content-center offset-3"
+                            style="padding: 20px;margin-left: 70px;" alt="Logo LinkedIn">
+                        <p style="color: rgb(255, 255, 255); margin-left: 40px;">07 81 91 63 13</p>
+                        <p style="color: rgb(255, 255, 255);">contact@ecolocleanersystem.fr</p>
+                        <p style="color: rgb(255, 255, 255);">© 2023 - Ecolo Cleaner System</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <!-- Troisième colonne -->
+                    <div class="offset-1" style="padding: 50px;">
+                        <p style="color: rgb(255, 255, 255);">Mentions légales</p>
+                        <p style="color: rgb(255, 255, 255);">Conditions générales de vente</p>
+                        <p style="color: rgb(255, 255, 255);">Politique de confidentialité</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="node_modules/cocoen/docs/js/cocoen-jquery.min.js"></script>
+    <script src="node_modules/cocoen/docs/js/cocoen.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+    <script>
+
+        document.querySelectorAll('.cocoen').forEach(function (element) {
+            new Cocoen(element);
+        });
+
+    </script>
+
+
+</body>
+
+</html>
